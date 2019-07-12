@@ -1,0 +1,474 @@
+/* ------------------------------------------------------------- */
+/* RESET STYLES */
+/* ------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #a60101;
+}
+
+h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  color: #222;
+}
+
+h4 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+p {
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 23px;
+  font-weight: 200;
+  font-size: 15px;
+  color: #222;
+}
+
+ul {
+  list-style-type: square;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding-left: 4%;
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 23px;
+  font-weight: 200;
+  font-size: 15px;
+  color: #222;
+}
+
+/* ------------------------------------------------------------- */
+/* PROFILE PICS */
+/* ------------------------------------------------------------- */
+
+.contact-icon {
+  height: 150px;
+  width: auto;
+  border-radius: 50%;
+  border: 8px solid #c2d0d8;
+}
+
+/*-------------------------------------------------------------------*/
+/* COLLAPSIBLE 2 */
+/*-------------------------------------------------------------------*/
+
+.collapsible {
+  background-color: #fff;
+  border: 1px solid #c2d0d8;
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 23px;
+  font-weight: 200;
+  font-size: 15px;
+  color: #222;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid rgb(205, 220, 236);
+  text-align: center;
+  align-items: flex-end;
+  outline: none;
+  font-size: 16px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #d5e4ec;
+}
+
+.text {
+  padding: 20px 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #d5e4ec;
+  border-top: none;
+}
+
+.collapsible:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  color: white;
+}
+
+/* ------------------------------------------------------------- */
+/* HERO */
+/* ------------------------------------------------------------- */
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 20px);
+  background-color: #a60101;
+  background-image: url(/img/sopra_hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: center;
+  z-index: 10;
+}
+
+/* ------------------------------------------------------------- */
+/* GRID */
+/* ------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px;
+}
+
+/* ------------------------------------------------------------- */
+/* LEDELSE CONTENT ROW 1 */
+/* ------------------------------------------------------------- */
+
+.block1 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 1;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+  z-index: 11;
+}
+
+.block2 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row-end: 1;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+  z-index: 11;
+}
+
+.block3 {
+  height: 300px;
+  grid-column: 3 / 4;
+  grid-row-end: 1;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+/*-------------------------------------------------------------------*/
+/* LEDELSE CONTENT ROW 2 */
+/*-------------------------------------------------------------------*/
+
+.block4 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 2;
+  -webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(20%);
+  z-index: 11;
+}
+
+.block5 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row-end: 2;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block6 {
+  height: 300px;
+  grid-column: 3 / 4;
+  grid-row-end: 2;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+/*-------------------------------------------------------------------*/
+/* LEDELSE CONTENT ROW 3 */
+/*-------------------------------------------------------------------*/
+
+.block7 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 3;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 10;
+}
+
+.block8 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row-end: 3;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 10;
+}
+
+.block9 {
+  height: 300px;
+  grid-column: 3 / 4;
+  grid-row-end: 3;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 10;
+}
+
+/*-------------------------------------------------------------------*/
+/* LEDELSE CONTENT ROW 4 */
+/*-------------------------------------------------------------------*/
+
+.block10 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 4;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block11 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row-end: 4;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block12 {
+  height: 300px;
+  grid-column: 3 / 4;
+  grid-row-end: 4;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+/*-------------------------------------------------------------------*/
+/* LEDELSE CONTENT ROW 5 */
+/*-------------------------------------------------------------------*/
+
+.block13 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 5;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block14 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row-end: 5;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block15 {
+  height: 300px;
+  grid-column: 3 / 4;
+  grid-row-end: 5;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+/*-------------------------------------------------------------------*/
+/* LEDELSE CONTENT ROW 6 */
+/*-------------------------------------------------------------------*/
+
+.block16 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 6;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block17 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row-end: 6;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+.block18 {
+  height: 300px;
+  grid-column: 3 / 4;
+  grid-row-end: 6;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+/*-------------------------------------------------------------------*/
+/* LEDELSE CONTENT ROW 7 */
+/*-------------------------------------------------------------------*/
+
+.block19 {
+  height: 300px;
+  grid-column: 1 / 2;
+  grid-row-end: 7;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%);
+  z-index: 11;
+}
+
+/*-------------------------------------------------------------------*/
+/* COLLAPSIBLE 2 */
+/*-------------------------------------------------------------------*/
+
+.collapsible {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 23px;
+  font-weight: 200;
+  font-size: 15px;
+  color: #222;
+  color: #222;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid rgb(205, 220, 236);
+  text-align: center;
+  align-items: flex-end;
+  outline: none;
+  font-size: 16px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #d5e4ec;
+}
+
+.text {
+  padding: 20px 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #d5e4ec;
+  border-top: none;
+}
+
+.collapsible:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  color: white;
+}

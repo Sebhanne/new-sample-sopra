@@ -1,0 +1,485 @@
+/* ------------------------------------------------------------- */
+/* RESET STYLES */
+/* ------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* ------------------------------------------------------------- */
+/* 12 CSS COLUMN GRID */
+/* ------------------------------------------------------------- */
+/* Setting up grid */
+.container {
+  display: grid;
+  width: 100%; /* Width of entire website */
+  margin-right: auto;
+  margin-left: auto; /* Margin right and left set to auto to centre container */
+}
+
+.one:first-child,
+.two:first-child,
+.three:first-child,
+.four:first-child,
+.five:first-child,
+.six:first-child,
+.seven:first-child,
+.eight:first-child,
+.nine:first-child,
+.ten:first-child,
+.eleven:first-child {
+  margin-left: 0; /* Align left start column with left of screen */
+}
+
+/*.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 73px 800px 333px 333px 333px 333px 400px 73px;
+  grid-template-areas:
+    "navbar"
+    "hero"
+    ". six three three ."
+    ". three six three ."
+    ". four four four four ."
+    ". project4 ."
+    ". project5 ."
+    ". project6 ."
+    "footer footer footer";
+  grid-row-gap: 1%;
+  color: #222;
+}*/
+
+.eleven {
+  width: 91.5%;
+  float: left;
+  margin-left: 2%;
+}
+
+.ten {
+  width: 83%;
+  float: left;
+  margin-left: 2%;
+}
+
+.nine {
+  width: 74.5%;
+  float: left;
+  margin-left: 2%;
+}
+
+.eight {
+  width: 66%;
+  float: left;
+  margin-left: 2%;
+}
+
+.seven {
+  width: 57.5%;
+  float: left;
+  margin-left: 2%;
+}
+
+.six {
+  width: 49%;
+  float: left;
+  margin-left: 2%;
+}
+
+.five {
+  width: 40.5%;
+  float: left;
+  margin-left: 2%;
+}
+
+.four {
+  width: 32%;
+  float: left;
+  margin-left: 2%;
+}
+
+.three {
+  width: 23.5%;
+  float: left;
+  margin-left: 2%;
+}
+
+.two {
+  width: 15%;
+  float: left;
+  margin-left: 2%;
+}
+
+.one {
+  width: 6.5%;
+  float: left;
+  margin-left: 2%;
+}
+
+/* Column 12 spans full width of container */
+.row {
+  width: 100%;
+  clear: both; /* Clear creates new styles for the next row */
+  padding: 0px;
+  margin: 0px;
+}
+
+/* ------------------------------------------------------------- */
+/* NAVBAR */
+/* ------------------------------------------------------------- */
+
+.navbar {
+  display: block;
+  float: right;
+  margin-top: 15px;
+  margin-right: 5%;
+}
+
+.logo {
+  float: left;
+  margin-top: 1.2%;
+  margin-left: 5%;
+  width: 150px;
+  height: auto;
+}
+
+header {
+  height: 50px;
+  background-color: #fff;
+  z-index: 200;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.links a {
+  margin-right: 100px;
+}
+
+/* ------------------------------------------------------------- */
+/* HERO IMAGE/SLIDER */
+/* ------------------------------------------------------------- */
+
+.hero-image {
+  width: 100%;
+  height: calc(100vh - 20px);
+  background-color: #a60101;
+  background-image: url(/img/sopra_hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: top;
+  z-index: 10;
+  /*height: calc(100vh - 10px);
+  background-color: blueviolet;
+  /* 100vh = 100% view height of device height, removes banner overflow scroll*/
+  /*background-image: url(/img/sopra_hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-size: cover;  Image always fits container */
+  /*height: calc(100vh - 10px);  removes banner overflow and banner scroll */
+}
+
+.row2 h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 62px;
+  margin-top: 40px;
+  margin-left: -350px;
+  text-align: center;
+}
+
+.row2 .left {
+  width: 50%;
+  background-color: #a60101;
+  opacity: 0;
+}
+
+.row2 .right {
+  width: 50%;
+  position: relative;
+  float: right;
+}
+
+/* ------------------------------------------------------------- */
+/* CONTENT */
+/* ------------------------------------------------------------- */
+
+/* Row 3 Content */
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-left: none;
+  color: #fff;
+  margin-top: 20px;
+  width: 180px;
+  padding: 10px;
+  align-items: bottom;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.button:hover {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-shadow: none;
+  border-left: none;
+  color: #fff;
+  margin-top: 20px;
+  width: 180px;
+  padding: 10px;
+  align-items: bottom;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.button a {
+}
+
+.row3 .six {
+  margin-top: 2%;
+  height: 300px;
+}
+
+.row3 .three {
+  margin-top: 2%;
+  height: 300px;
+}
+
+.row3 .left {
+  background: url(/img/blog_feature1_robots.png) no-repeat center center;
+  background-size: cover;
+  -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(70%);
+  z-index: 1;
+
+}
+
+
+.row3 .centre {
+  background: #a60101;
+}
+
+.row3 .centre h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+color: #fff;
+vertical-align: center;
+text-align: center;
+}
+
+.row3 .right {
+  background: url(/img/news1.png) no-repeat center center;
+  background-size: cover;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+}
+
+/* ------------------------------------------------------------- */
+
+.row4 .six {
+  margin-top: 2%;
+  height: 300px;
+}
+
+.row4 .three {
+  margin-top: 2%;
+  height: 300px;
+}
+
+.row4 .left {
+  background: #a60101;
+}
+
+.row4 .centre {
+  background: url(/img/Abstract\ -\ 2127-2.mp4);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.row4 .centre h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin-right: 50px;
+  margin-top: 150px;
+color: #fff;
+text-align: right;
+text-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row4 .right {
+  background: url(/img/news2.png) no-repeat center center;
+  background-size: cover;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+}
+
+.row5 .right {
+  background: url(/img/news2.png) no-repeat center center;
+  background-size: cover;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+}
+
+/* ------------------------------------------------------------- */
+
+.row5 .three {
+  margin-top: 2%;
+  background-color: blue;
+  height: 300px;
+}
+
+.row5 .left-centre {
+  background: url(/img/next_innovation.png);repeat: center center;
+  background-size: cover;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+
+  .row5 .right-centre {
+    background: url(/img/next_innovation.png);repeat: center center;
+    background-size: cover;
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+  }
+/* ------------------------------------------------------------- */
+
+.row6 .four {
+  margin-top: 2%;
+  background-color: #a60101;
+  height: 300px;
+}
+
+/* ------------------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------------------- */
+/* Footer infobar */
+
+.footer-wrapper {
+  margin-top: 2%;
+  background-color: #000000;
+}
+
+.footer-info {
+  margin-top: 2%;
+  background-image: url(/img/contactfooter.png);
+  background-repeat: no-repeat;
+  position: top;
+  background-size: cover;
+  height: 300px;
+  opacity: 0.7;
+}
+
+/* Footer */
+
+.bottom {
+  background-color: #111;
+  height: 50px;
+}
+
+/* ------------------------------------------------------------- */
+/* CONTACT SLIDER */
+/* ------------------------------------------------------------- */

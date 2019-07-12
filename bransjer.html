@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tema</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-size: 20px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        color: #a60101;
+      }
+
+      h3 {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 35px;
+        color: #222;
+      }
+
+      h4 {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+      }
+
+      p {
+        font-family: "Montserrat Alternates", sans-serif;
+        line-height: 23px;
+        font-weight: 200;
+        font-size: 15px;
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+        font-family: "Montserrat Alternates", sans-serif;
+        padding-left: 4%;
+        font-family: "Montserrat Alternates", sans-serif;
+        line-height: 23px;
+        font-weight: 200;
+        font-size: 15px;
+        color: #222;
+      }
+
+      .hero {
+        width: 100%;
+        height: calc(100vh - 20px);
+        background-color: #a60101;
+        background-image: url(/img/sopra_hero.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: center;
+        z-index: 10;
+        /*height: calc(100vh - 10px);
+      background-color: blueviolet;
+      /* 100vh = 100% view height of device height, removes banner overflow scroll*/
+        /*background-image: url(/img/sopra_hero.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      /*background-size: cover;  Image always fits container */
+        /*height: calc(100vh - 10px);  removes banner overflow and banner scroll */
+      }
+
+      .grid {
+        display: grid;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        grid-column-gap: 30px;
+        grid-row-gap: 2%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-area: ;
+      }
+
+      /*.grid div:nth-child(even) {
+        background-color: blueviolet;
+      }*/
+
+      /* .grid div:nth-child(odd) {
+        background-color: blue;
+      }*/
+
+      .icon {
+        margin: 0 auto;
+        width: 30%;
+        height: auto;
+        text-align: center;
+      }
+
+      .block1 {
+        grid-area: content;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row-end: 1;
+        z-index: 11;
+      }
+
+      .block2 {
+        grid-area: content;
+        height: auto;
+        grid-column: 2 / 3;
+        grid-row-end: 1;
+        z-index: 11;
+      }
+
+      .block3 {
+        grid-area: content;
+        height: auto;
+        grid-column: 3 / 4;
+        grid-row-end: 1;
+        z-index: 11;
+      }
+
+      .block4 {
+        grid-area: content;
+        height: minmax(auto, 300px);
+        grid-column: 1 / 2;
+        grid-row-end: 2;
+        z-index: 10;
+      }
+
+      .block5 {
+        grid-area: content;
+        height: auto;
+        grid-column: 2 / 3;
+        grid-row-end: 2;
+        z-index: 10;
+      }
+
+      .block6 {
+        grid-area: content;
+        height: auto;
+        grid-column: 3 / 4;
+        grid-row-end: 2;
+        z-index: 10;
+      }
+
+      .block7 {
+        grid-area: content;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row-end: 3;
+        z-index: 8;
+      }
+
+      .block8 {
+        grid-area: content;
+        height: auto;
+        grid-column: 2 / 3;
+        grid-row-end: 3;
+        z-index: 8;
+      }
+
+      .block9 {
+        grid-area: content;
+        height: auto;
+        grid-column: 3 / 4;
+        grid-row-end: 3;
+        z-index: 8;
+      }
+
+      .block10 {
+        grid-area: content;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row-end: 4;
+        z-index: 7;
+      }
+
+      .block11 {
+        grid-area: content;
+        height: auto;
+        grid-column: 2 / 3;
+        grid-row-end: 4;
+        z-index: 7;
+      }
+
+      .block12 {
+        grid-area: content;
+        height: auto;
+        grid-column: 3 / 4;
+        grid-row-end: 4;
+        z-index: 7;
+      }
+
+      .block13 {
+        grid-area: content;
+        height: auto;
+        grid-column: 2 / 3;
+        grid-row-end: 5;
+        z-index: 6;
+      }
+
+      .collapsible {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        font-family: "Montserrat Alternates", sans-serif;
+        line-height: 23px;
+        font-weight: 200;
+        font-size: 15px;
+        color: #222;
+        color: #222;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: 1px solid rgb(205, 220, 236);
+        text-align: center;
+        align-items: flex-end;
+        outline: none;
+        font-size: 16px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: rgb(205, 220, 236);
+      }
+
+      .text {
+        padding: 20px 18px;
+        display: none;
+        overflow: hidden;
+        background-color: white;
+        border: 1px solid rgb(205, 220, 236);
+        border-top: none;
+      }
+
+      .collapsible:after {
+        content: "\02795"; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+        color: white;
+      }
+
+      .contact-icon {
+        width: auto;
+        height: 15px;
+      }
+
+      .tema-icon {
+        height: 120px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!------------------------------------------------------------------->
+    <!-- NAVBAR -->
+    <!-----------------------------------------------------------------
+
+      <div class="navbar">
+        <a href="#"><img src="/img/soprasteria_logo.png" class="logo"/></a>
+        <nav class="links">
+          <a href="#">About</a>
+          <a href="#">Innovation</a>
+          <a href="#">Industries</a>
+          <a href="#">Sectors</a>
+          <a href="#">Focus</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>-->
+    <!------------------------------------------------------------------->
+    <!-- HERO COVER -->
+    <!------------------------------------------------------------------->
+
+    <div class="hero"></div>
+
+    <!------------------------------------------------------------------->
+    <!-- BIG DATA CONTENT ROW 1 -->
+    <!------------------------------------------------------------------->
+
+    <div class="grid">
+      <div class="content block1">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="big data" />
+          <h1>Big Data</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics
+            <br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.
+            </strong>
+    
+          </p>
+          <br>
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br>
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- BLOCK CHAIN CONTENT ROW 1 -->
+      <!------------------------------------------------------------------->
+      <div class="content block2">
+        <button class="collapsible">
+          <img src="/img/blockchain.png" class="tema-icon" alt="blockchain" />
+          <h1>Blockchain</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+      <!------------------------------------------------------------------->
+      <!-- CHAT BOTS CONTENT ROW 1 -->
+      <!------------------------------------------------------------------->
+      <div class="content block3">
+        <button class="collapsible">
+          <img src="/img/chatbot.png" class="tema-icon" alt="chatbots" />
+          <h1>Chatbots</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- DIGITAL TRANSFORMASJON CONTENT ROW 2 -->
+      <!------------------------------------------------------------------->
+      <div class="content block4">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Digital Transformasjon</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- INTERNET OF THINGS CONTENT ROW 2 -->
+      <!------------------------------------------------------------------->
+      <div class="content block5">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Internet of Things</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- KUNDESENTRISKE LØSNINGER CONTENT ROW 2 -->
+      <!------------------------------------------------------------------->
+      <div class="content block6">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Kundesentriske Løsninger</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- AI OG MASKINLAERING CONTENT ROW 3 -->
+      <!------------------------------------------------------------------->
+      <div class="content block7">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>AI og Maskinlæring</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- MIXED REALITY CONTENT ROW 3 -->
+      <!------------------------------------------------------------------->
+      <div class="content block8">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Mixed Reality</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- GDPR CONTENT ROW 3 -->
+      <!------------------------------------------------------------------->
+      <div class="content block9">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Personvern</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- ROBOTIC PROCESS AUTOMATION CONTENT ROW 4 -->
+      <!------------------------------------------------------------------->
+      <div class="content block10">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Robotic Process Automation</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- SKYTJENESTER CONTENT ROW 4 -->
+      <!------------------------------------------------------------------->
+      <div class="content block11">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Skytjenester</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- SMART CITY CONTENT ROW 4 -->
+      <!------------------------------------------------------------------->
+      <div class="content block12">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Smart City</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- SOSIALE VIRKSOMHETER CONTENT ROW 5 -->
+      <!------------------------------------------------------------------->
+      <div class="content block13">
+        <button class="collapsible">
+          <img src="/img/big_data.png" class="tema-icon" alt="" />
+          <h1>Sosiale Virksomheter</h1>
+
+          <h4>Johan Wiqvist</h4>
+          <p>
+            Head of Business Analytics<br />
+            <img src="/img/call_icon.png" class="contact-icon" /> +47 413 74
+            973<br />
+            <img src="/img/email_icon.png" class="contact-icon" />
+            johan.wiqvist@soprasteria.com
+          </p>
+        </button>
+
+        <div class="text">
+          <p>
+            <strong>
+              Bedrifter og organisasjoner blir i økende grad oppmerksomme på den
+              potensielle verdien som ligger i virksomhetens data. Dataene er en
+              kilde til vekst og økt konkurransekraft.</strong
+            >
+          </p>
+          <br />
+
+          <p>
+            Dette fremmer spørsmålet om hvordan man best benytter denne enorme
+            mengden informasjon.
+          </p>
+          <br />
+          <p>
+            Sopra Sterias tilbud innenfor Big Data dekker to komplementære
+            områder:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Forretningsstøtte: prognoser av kundenes behov, analyser av atferd
+              og følelser, identifisering av svindelforsøk og
+              svindelforebyggende tiltak, forebyggende vedlikehold og lignende.
+            </li>
+            <br />
+            <li>
+              IS-arkitektur og systemintegrasjon for å integrere innovative
+              løsninger i selskapets informasjonssystem.
+            </li>
+          </ul>
+          <br />
+
+          <p>Vi tilbyr en rekke tjenester som gir ulike fordeler:</p>
+          <br />
+          <ul>
+            <li>Rådgivning</li>
+            <li>Diskstørrelse og minne</li>
+            <li>Hadoop-teknologien</li>
+            <li>Reaktiv til en prediktiv</li>
+          </ul>
+          <br />
+
+          <h3>Rådgivning</h3>
+          <p>
+            Vi gir kundene våre råd, slik at de kan identifisere hvordan de kan
+            bruke sine data på best mulig måte og hente maksimal verdi ut av
+            dem.
+          </p>
+          <br />
+
+          <h3>Diskstørrelse og minne</h3>
+          <p>
+            Databehandlingskraften til store databaser på områdene diskstørrelse
+            og minne sikrer at kundene kan se enda nærmere på koblingen mellom
+            forskjellig type informasjon.
+          </p>
+          <br />
+
+          <h3>Hadoop-teknologien</h3>
+          <p>
+            Bruk av Hadoop-teknologien for å sette samme strukturert og
+            ustrukturert data, samt modellere kunnskap basert på dette, gir
+            håndfast innsikt.
+          </p>
+          <br />
+
+          <h3>Reaktiv til en prediktiv</h3>
+          <p>
+            Vi hjelper våre kunder med å bytte fra en reaktiv til en prediktiv
+            handlemåte gjennom bruk av nye algoritmer og analyseverktøy.
+          </p>
+          <br />
+          <p>
+            Som en mangeårig aktør innenfor dataforvaltning hjelper Sopra Steria
+            sine kunder med å optimalisere den globale administrasjonen av
+            selskapets data og tilbyr både løsninger innenfor Data Management
+            (MDM/DQM) og Business Intelligence (BI).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------------------------------->
+    <!-- FOOTER -->
+    <!------------------------------------------------------------------->
+
+    <div class="footer"></div>
+
+    <!------------------------------------------------------------------->
+    <!-- BOTTOM BAR -->
+    <!------------------------------------------------------------------->
+
+    <div class="bottom"></div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
