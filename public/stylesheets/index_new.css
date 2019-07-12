@@ -193,7 +193,7 @@ ul {
   width: 100%;
   height: calc(100vh);
   background-color: #a60101;
-  background-image: url(/img/sopra_hero.png);
+  background-image: url("../images/sopra_hero.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: center;
@@ -285,7 +285,7 @@ ul {
   height: 300px;
   grid-column: 1 / 3;
   grid-row-end: 1;
-  background: url(/img/blog_feature1_robots.png);
+  background: url("..images/blog_feature1_robots.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: center;
@@ -309,7 +309,7 @@ ul {
   height: 300px;
   grid-column: 4 / 5;
   grid-row-end: 1;
-  background: url(/img/news1.png);
+  background: url("..images/news1.png");
   -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
   background-repeat: no-repeat;
@@ -359,7 +359,7 @@ ul {
   height: 300px;
   grid-column: 4 / 5;
   grid-row-end: 2;
-  background: url(/img/news2.png);
+  background: url("..images/news2.png");
   -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
   background-repeat: no-repeat;
@@ -378,7 +378,7 @@ ul {
   height: 300px;
   grid-column: 1 / 2;
   grid-row-end: 3;
-  background: url(/img/scaleup.png);
+  background: url("..images/scaleup.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: center;
@@ -391,7 +391,7 @@ ul {
   height: 300px;
   grid-column: 2 / 3;
   grid-row-end: 3;
-  background: url(/img/next_innovation.png);
+  background: url("..images/next_innovation.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: center;
@@ -404,7 +404,7 @@ ul {
   height: 300px;
   grid-column: 3 / 5;
   grid-row-end: 3;
-  background: url(/img/work_sopra.png);
+  background: url("..images/work_sopra.png");
   opacity: 0.9;
   -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
@@ -462,7 +462,7 @@ ul {
   margin-top: 2%;
   background-repeat: no-repeat;
   position: top;
-  background-image: url(/img/contactfooter.png);
+  background-image: url("..images/contactfooter.png");
   background-repeat: no-repeat;
   position: center;
   overflow: hidden;
